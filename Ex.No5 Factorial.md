@@ -2,7 +2,7 @@
 ### DATE
 23/09/2024
 ### REGISTER NUMBER :
-212222040112
+212222040106
 ### AIM: 
 To  write  a logic program for finding the factorial of given number using SWI-PROLOG. 
 ### Algorithm:
