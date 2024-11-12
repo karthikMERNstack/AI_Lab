@@ -23,8 +23,6 @@ Step 14 : Launch the Gradio interface for user interaction.
 Step 15 : Stop the program.
 
 ### Program:
-
-
 ```
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
@@ -35,34 +33,42 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 
-
+```
+```
 data = pd.read_csv('/content/sample_data/student_exam_data.csv')
 data.head()
-
+```
+```
 data.dtypes
-
+```
+```
 data.shape
-
+```
+```
 data.columns
-
+```
+```
 X = data.drop(['Pass/Fail'], axis=1)
 y = data['Pass/Fail']
-
+```
+```
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
+```
+```
 from sklearn.preprocessing import MinMaxScaler
 
 scale = MinMaxScaler()
 
 X_train_scale = scale.fit_transform(X_train)
 X_test_scale = scale.transform(X_test)
-
+```
+```
 from sklearn.ensemble import RandomForestClassifier
 model = RandomForestClassifier()
-
-
+```
+```
 from sklearn.metrics import accuracy_score
 
 model.fit(X_train_scale, y_train)
@@ -70,8 +76,8 @@ model.fit(X_train_scale, y_train)
 y_pred = model.predict(X_test_scale)
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
-```
 
+```
 ### Output:
 
 
