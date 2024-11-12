@@ -40,7 +40,8 @@ bfs(visited, graph, '5')
 ```
 
 ### Output:
-![](BFS.png)
+![image](https://github.com/user-attachments/assets/99bdd65b-d859-47e4-a211-718aad6be3eb)
+
 
 
 ### Result:
